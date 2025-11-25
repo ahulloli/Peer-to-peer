@@ -1,0 +1,5 @@
+[25-Nov-2025 04:02:46 PM]: Peer [1003] makes a connection to Peer [1001]. 
+[25-Nov-2025 04:02:46 PM]: Peer [1003] makes a connection to Peer [1002]. 
+[25-Nov-2025 04:02:50 PM]: Peer [1003] is unchoked by [1002]. 
+[25-Nov-2025 04:02:50 PM]: Peer [1003] has downloaded the piece [0] from [1002]. Now the number of pieces it has is [1]. 
+[25-Nov-2025 04:02:50 PM]: Peer [1003] has downloaded the complete file. 

@@ -1,0 +1,8 @@
+[25-Nov-2025 04:02:39 PM]: Peer [1001] is connected from Peer [1002]. 
+[25-Nov-2025 04:02:39 PM]: Peer [1001] received the ‘interested’ message from [1002]. 
+[25-Nov-2025 04:02:41 PM]: Peer [1001] has the preferred neighbors [1002]. 
+[25-Nov-2025 04:02:41 PM]: Peer [1001] has the optimistically unchoked neighbor [1002]. 
+[25-Nov-2025 04:02:41 PM]: Peer [1001] received the ‘have’ message from [1002] for the piece [0]. 
+[25-Nov-2025 04:02:41 PM]: Peer [1001] received the ‘not interested’ message from [1002]. 
+[25-Nov-2025 04:02:46 PM]: Peer [1001] is connected from Peer [1003]. 
+[25-Nov-2025 04:02:46 PM]: Peer [1001] received the ‘interested’ message from [1003]. 

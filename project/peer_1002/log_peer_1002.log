@@ -1,0 +1,9 @@
+[25-Nov-2025 04:02:39 PM]: Peer [1002] makes a connection to Peer [1001]. 
+[25-Nov-2025 04:02:41 PM]: Peer [1002] is unchoked by [1001]. 
+[25-Nov-2025 04:02:41 PM]: Peer [1002] has downloaded the piece [0] from [1001]. Now the number of pieces it has is [1]. 
+[25-Nov-2025 04:02:41 PM]: Peer [1002] has downloaded the complete file. 
+[25-Nov-2025 04:02:41 PM]: Peer [1002] received the ‘not interested’ message from [1001]. 
+[25-Nov-2025 04:02:46 PM]: Peer [1002] is connected from Peer [1003]. 
+[25-Nov-2025 04:02:46 PM]: Peer [1002] is choked by [1001]. 
+[25-Nov-2025 04:02:46 PM]: Peer [1002] received the ‘interested’ message from [1003]. 
+[25-Nov-2025 04:02:50 PM]: Peer [1002] has the preferred neighbors [1003]. 
