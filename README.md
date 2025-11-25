@@ -1,16 +1,48 @@
-# PeerToPeer-FileSharing
-In this project, a P2P file sharing software similar to BitTorrent is implemented in Java. BitTorrent is a popular P2P protocol for file distribution. Among its interesting features, choking-unchoking mechanism which is one of the most important features of BitTorrent. In the Protocol Description pdf file, you can read the protocol description, which has been modified a little bit from the original BitTorrent protocol. After reading the protocol description carefully, you can follow the implementation specifics shown in the Implementation Specifics section.
+# Peer-to-Peer File Sharing System
 
-## Program Steps:
-To run the project, prerequisite is the following:
-- Login to the remote machine, copy the source coded, and compile the code: "javac PeerProcess.java".
-- To run PeerProcces in the remote machines, we wrote a wrapper. So if we start the wrapper, all the processes will be started in the remote machines.
-- To connect to the remote machines via our local machines, we need to first generate the keys.
+A Java implementation of a BitTorrent-like peer-to-peer file sharing system with sophisticated choking/unchoking mechanisms and distributed file distribution capabilities.
 
-Follow the below to generate the keys:
-1. Run "ssh-keygen" - it will prompt for file name and passphrase, please don't have a passphrase.
-2. Run "ssh-copy-id -i <your_key> <username>@<remote_machine>" - Copy the key to one of your remote machines.
-- Login to all the remote machines using this key once before you start the wrapper using "ssh -i <your_key> <username>@<remote_machine>". This will avoid the fingerprint prompt message once you start the wrapper.
-- Copy the Common.config file, PeerInfo.config file and the actual file to be transferred in the corresponding peer directories under the folder "project/".
-- In the Ssh wrapper file, please change the username to yours, projPath to where you run the program and 'pubKey' to your generated rsakey.
-- To start the wrapper compile the Ssh.java program - "javac Ssh.java", and run the wrapper - "java Ssh".
+## Overview
+
+This project implements a P2P file sharing software similar to BitTorrent. The system features the choking-unchoking mechanism, which is one of the most important features of BitTorrent protocol. The implementation follows a modified version of the original BitTorrent protocol optimized for educational purposes.
+
+## Key Features
+
+- **Choking/Unchoking Mechanism**: Dynamic peer selection based on download rates
+- **Optimistic Unchoking**: Fair resource allocation among peers  
+- **Piece-based File Sharing**: Efficient file distribution using BitSet tracking
+- **Multi-machine Deployment**: SSH wrapper for distributed peer startup
+- **Extensive Logging**: Comprehensive monitoring of peer interactions
+
+## Program Setup
+
+### Prerequisites
+- Java Development Kit (JDK)
+- SSH access to remote machines (if using distributed deployment)
+- Network connectivity between peer machines
+
+### Running the Project
+
+1. **Compile the code**:
+   ```bash
+   javac PeerProcess.java
+   ```
+
+2. **For distributed deployment**:
+   - Generate SSH keys: `ssh-keygen` (no passphrase)
+   - Copy keys to remote machines: `ssh-copy-id -i <your_key> <username>@<remote_machine>`
+   - Test SSH connections to avoid fingerprint prompts
+   - Update `Ssh.java` with your username, project path, and SSH key path
+   - Compile and run the SSH wrapper: `javac Ssh.java && java Ssh`
+
+3. **Configuration Files**:
+   - Copy `Common.cfg` and `PeerInfo.cfg` to peer directories
+   - Place the file to be shared in the appropriate peer directory
+
+## Architecture
+
+- **PeerProcess.java**: Main entry point
+- **PeerAdmin.java**: Central coordinator for peer operations
+- **PeerHandler.java**: Individual peer connection management
+- **ChokeHandler.java**: Implements choking/unchoking algorithms
+- **OptimisticUnchokeHandler.java**: Manages optimistic unchoking
